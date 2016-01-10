@@ -11,4 +11,6 @@ RUN curl https://storage.googleapis.com/pub/gsutil.tar.gz | tar -xz
 ADD src/entrypoint.sh /
 RUN chmod 500 entrypoint.sh
 
+RUN touch /root/.boto
+
 ENTRYPOINT ["/entrypoint.sh"]

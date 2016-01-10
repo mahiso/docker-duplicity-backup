@@ -1,3 +1,4 @@
+backup_var/boto.cfg*
 backup_var/duplicity-backup.conf
 backup_var/cache/**
 backup_var/log/**

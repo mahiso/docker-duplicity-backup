@@ -9,4 +9,4 @@ mkdir -p $MYPATH/backup_var/log $MYPATH/backup_var/cache
 docker rm $(docker ps -a | grep $MYIMAGE | awk '{print $1}') >/dev/null
 
 # Run it
-docker run -ti -v $MYPATH/backup_var:/backup_var -v /:/SRC $MYIMAGE -c /backup_var/duplicity-backup.conf "$@"
+docker run -ti -v $MYPATH/backup_var:/backup_var -v /:/SRC $MYIMAGE "$@"
